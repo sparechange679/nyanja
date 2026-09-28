@@ -1,0 +1,26 @@
+format = """
+[](fg:#5F7376)$directory$git_branch$git_status
+[❯](bold fg:#4FC3B4) """
+
+[directory]
+style = "fg:#93A7A9"
+format = "[$path]($style) "
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "fg:#E8A44C"
+format = "[$symbol$branch]($style) "
+symbol = " "
+
+[git_status]
+style = "fg:#E36A5B"
+format = "[$all_status$ahead_behind]($style)"
+
+[character]
+disabled = true
+
+[cmd_duration]
+style = "fg:#8E7CC8"
+format = "[$duration]($style) "
+min_time = 2000

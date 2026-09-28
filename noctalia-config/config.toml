@@ -1,0 +1,118 @@
+[accessibility]
+ui_scale = 1.20
+
+[bar.default]
+center = [ "clock" ]
+concave_edge_corners = true
+end = [ "volume", "spacer_1", "group:sys", "session" ]
+margin_edge = 0
+margin_ends = 0
+radius_bottom_left = 12
+radius_bottom_right = 12
+radius_top_left = 0
+radius_top_right = 0
+scale = 1.10
+start = [ "launcher", "workspaces", "spacer_1", "active_window" ]
+thickness = 35
+
+    [[bar.default.capsule_group]]
+    border = ""
+    fill = "on_secondary"
+    id = "sys"
+    members = [ "network", "battery" ]
+    opacity = 1.0
+    padding = 6.0
+
+[shell]
+clipboard_image_action_command = "swash --stdin --name \"swash-$(date +'%Y-%m-%d_%H:%M:%S').png\""
+launch_apps_as_systemd_services = true
+polkit_agent = true
+settings_show_advanced = true
+
+    [shell.greeter_sync]
+    auto_sync = false
+
+    [shell.panel]
+    open_near_click_control_center = true
+    session_placement = "floating"
+    session_position = "center"
+
+    [shell.screenshot]
+    copy_to_clipboard = false
+    pipe_command = "swash --stdin --name \"swash-$(date +'%Y-%m-%d_%H:%M:%S').png\""
+    pipe_to_command = true
+    save_to_file = false
+
+    [[shell.session.actions]]
+    action = "logout"
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    enabled = true
+    shortcut = "3"
+    variant = "destructive"
+
+[system.monitor]
+gpu_poll_seconds = 2
+
+[theme]
+mode = "dark"
+source = "custom"
+custom_palette = "Nyanja"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "kcolorscheme", "kitty", "qt", "alacritty" ]
+
+[widget.clock]
+color = "secondary"
+format = "{:%H:%M %A %m/%d/%y}"
+
+[widget.launcher]
+color = "secondary"
+
+[widget.network]
+color = "secondary"
+
+[widget.session]
+color = "error"
+
+[widget.spacer_1]
+type = "spacer"
+
+[widget.volume]
+color = "secondary"
+
+[widget.workspaces]
+active_pill_size = 2.5
+capsule = true
+capsule_fill = "on_primary"
+inactive_pill_size = 1.0
+pill_scale = 0.80
+show_labels = false
+
+[widget.battery]
+color = "secondary"
+device = "auto"
+type = "battery"
+
+[shell.launcher]
+categories = false
+show_app_origin_indicator = false
+
+[lockscreen]
+enabled = true
+blurred_desktop = false
+blur_intensity = 0.65
+tint_intensity = 0.10
+transition = ["fade"]
+transition_duration = 900

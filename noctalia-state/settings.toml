@@ -1,0 +1,131 @@
+config_version = 14
+
+[bar.default]
+background_opacity = 0.0
+capsule = true
+capsule_border = "#26343A"
+capsule_foreground = "primary"
+capsule_opacity = 0.59999998658895493
+capsule_padding = 13.0
+capsule_radius = 5
+capsule_thickness = 0.79999998584389687
+font_family = "JetBrainsMono Nerd Font"
+margin_edge = 8
+margin_opposite_edge = 8
+padding = 13
+widget_spacing = 8
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = false
+        show_keyboard_layout = false
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = false
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 800.0
+    cy = 672.5
+    output = "eDP-1"
+    placement_height = 900.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = false
+        show_keyboard_layout = false
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = false
+
+[shell.launcher]
+categories = false
+compact = true
+show_app_origin_indicator = false
+
+[shell.screenshot]
+copy_to_clipboard = true
+
+[theme]
+builtin = "Ayu"
+mode = "dark"
+source = "custom"
+
+[wallpaper.default]
+path = "/home/blessings/Pictures/Wallpapers/nyanja-wallpaper.png"
+
+[wallpaper.last]
+path = "/home/blessings/Pictures/Wallpapers/nyanja-wallpaper.png"
+
+[wallpaper.monitors.eDP-1]
+path = "/home/blessings/Pictures/Wallpapers/nyanja-wallpaper.png"
+
+[[wallpaper.favorite]]
+builtin_palette = "Ayu"
+palette_source = "builtin"
+path = "/home/blessings/Pictures/Wallpapers/nyanja-wallpaper.png"
+theme_mode = "dark"
+
+[widget.active_window]
+color = "secondary"
+display = "text_only"
+
+[widget.clock]
+font_family = "JetBrainsMono Nerd Font"
+format = "{:%H:%M %a %d %b}"
+icon_color = "primary"
+tooltip_format = "{:%A, %d %B %Y}"
+
+[widget.launcher]
+color = "#E8A44C"
+glyph = "flare-filled"
+
+[widget.workspaces]
+capsule_border = "#26343A"
+capsule_opacity = 0.59999999999999998
+capsule_padding = 8
+capsule_radius = 5
+empty_color = "#5F7376"
+focused_color = "#E8A44C"
+occupied_color = "#4FC3B4"
